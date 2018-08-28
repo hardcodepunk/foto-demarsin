@@ -2,12 +2,19 @@
  * lay-out
  */
 
-.body {
-  background: $teal;
+
+
+.wrapper {
+  padding: 50px 140px 45px;
 }
 
 .header {
-  padding: 50px 140px 35px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transform: translateY(0);
+  transition: all 400ms ease-in-out;
+  will-change: transform;
   &__nav {
     float: right;
   }
@@ -26,16 +33,62 @@
 }
 
 .slider {
-
+  width: 100%;
+  height: 100%;
 }
 
 /*
  * components
  */
 
+// homepage
+
+.about {
+  background: #000;
+}
+
+// studio
+.studio {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  margin: 0 0 432px;
+  overflow: hidden;
+  z-index: 3;
+  background: #fff;
+  min-height: 800px;
+}
+
+.studio__background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -800px;
+  z-index: 1;
+}
+
+.studio__background__img {
+  width: 100%;
+}
+
+
+
+
+
+
 /*
  * styling
  */
+
+ .index-page, .index-page .header {
+   background: $teal;
+ }
+
+ .studio-page, .studio-page .header {
+   background: #fff;
+ }
 
 .logo, .nav {
   color: #000;
@@ -51,6 +104,9 @@
         padding-bottom: 15px;
         border-bottom: 2px transparent solid;
         &:hover {
+          border-bottom: 2px #000 solid;
+        }
+        &.is-active {
           border-bottom: 2px #000 solid;
         }
       }
