@@ -14,3 +14,9 @@ toggleNav.onclick = function() {
   document.querySelector('.body').classList.toggle('open-menu');
   console.log("yeah");
 }
+
+window.onload = function() {
+  $(".flexslider").flexslider({
+    directionNav: !1
+  })
+}

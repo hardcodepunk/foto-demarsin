@@ -10,29 +10,64 @@
 </head>
 <body class="body index-page">
 <header id="site-nav" class="header">
-  <div class="wrapper">
+  <div class="wrapper header__wrapper">
     <a href="#" class="logo">fotodemarsin</a>
     <nav class="nav header__nav">
-      <ul class="list list--horizontal">
+      <ul class="list list--horizontal list--center-on-mobile">
           <li class="list__item"><a class="list__item__anchor" href="#">Aanbod</a></li>
           <li class="list__item"><a class="list__item__anchor" href="#">Studio</a></li>
           <li class="list__item"><a class="list__item__anchor" href="#">Contact</a></li>
           <li class="list__item"><a class="button" href="#">Webshop</a></li>
         </ul>
     </nav>
+    <a class="nav__toggle js-menu-toggle" href="#">
+      <b class="top"></b>
+      <b class="middle"></b>
+      <b class="bottom"></b>
+    </a>
   </div>
 </header>
-<section class="slider">
-
+<section class="flexslider">
+  <ul class="slides">
+    <li>
+      <div class="wrapper">
+        <h1 class="slider__title">Meer dan 45 jaar ervaring</h1>
+      </div>
+    </li>
+    <li>
+      <div class="wrapper">
+        <h1 class="slider__title">Professioneel team</h1>
+      </div>
+    </li>
+    <li>
+      <div class="wrapper">
+        <h1 class="slider__title">Uniek online systeem</h1>
+      </div>
+    </li>
+    <li>
+      <div class="wrapper">
+        <h1 class="slider__title">Uitstekende service</h1>
+      </div>
+    </li>
+  </ul>
 </section>
 <section class="about">
   <div class="wrapper">
+    <div class="flex-container">
+      <h2 class="about__title">Demarsin</h2>
+      <article class="about__article">
+        <p class="about__article__body">Doorheen decennia — sinds 1969 — bouwde Guy Demarsin een beroepscarrière in schoolfotografie op. Van enkele scholen vastleggen naar verschillende duizendtallen. Van één naar tweeëndertig teamleden.</p>
+        <p class="about__article__body about__article__body--weighted">De professionele evolutie verweven met die van het medium. Van zwart wit naar kleur. Van analoog naar digitaal.</p>
+      </div>
+    </div>
   </div>
 </section>
 <footer class="footer">
 
 </footer>
 <!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/flexslider.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
