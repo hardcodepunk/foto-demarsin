@@ -69,6 +69,12 @@
   }
 }
 
+.contact-page .header .nav__toggle {
+  .top, .middle, .bottom {
+    background: #fff;
+  }
+}
+
 .open-menu .header {
   @media only screen and (max-width: 900px) {
     height: 100%;
@@ -295,6 +301,117 @@
   }
 }
 
+// contact
+
+.contact-page {
+  background: $teal;
+}
+
+.contact {
+  padding-top: 400px;
+}
+
+.contact__column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact__title {
+  font-weight: 800;
+  font-size: 70px;
+}
+
+.contact__title, .contact__mail {
+  padding-left: 40px;
+}
+
+.contact__address {
+  text-align: right;
+  font-weight: normal;
+}
+
+.contact__vertegenwoordiger {
+  background: #000;
+  flex: 1 0 auto;
+  height: auto;
+  color: #fff;
+  &__portrait {
+    width: 100%;
+    height: 50%;
+    background: url("../img/portrait__brett-van-craenenbroeck.jpg") no-repeat;
+    @include image_2x("../img/portrait__brett-van-craenenbroeck@2x.jpg", 100%, 100%);
+    background-size: cover;
+  }
+  &__info {
+    width: 100%;
+    padding: 20px 20px 20px 30px;
+    flex-grow: 1;
+    &__main {
+      &__title {
+        font-size: 50px;
+        font-weight: 800;
+        text-align: right;
+      }
+      &__subtitle {
+        font-size: 20px;
+        font-weight: normal;
+      }
+    }
+    &__last-name {
+      writing-mode: tb-rl;
+      font-size: 30px;
+      margin: 0;
+      width: 45px;
+      flex: 1;
+    }
+  }
+  &:hover {
+    filter: invert(1);
+  }
+}
+
+.contact__vertegenwoordiger__portrait--hans {
+  background: url("../img/portrait__hans-poffe.jpg") no-repeat;
+  @include image_2x("../img/portrait__hans-poffe@2x.jpg", 100%, 100%);
+  background-size: cover;
+}
+
+.contact__vertegenwoordiger__portrait--marcel {
+  background: url("../img/portrait__marcel-janssens.jpg") no-repeat;
+  @include image_2x("../img/portrait__marcel-janssens@2x.jpg", 100%, 100%);
+  background-size: cover;
+}
+
+.contact__vertegenwoordiger__portrait--brett {
+  background: url("../img/portrait__brett-van-craenenbroeck.jpg") no-repeat;
+  @include image_2x("../img/portrait__brett-van-craenenbroeck@2x.jpg", 100%, 100%);
+  background-size: cover;
+}
+
+.contact__vertegenwoordiger__portrait--matthias {
+  background: url("../img/portrait__matthias-claes.jpg") no-repeat;
+  @include image_2x("../img/portrait__matthias-claes@2x.jpg", 100%, 100%);
+  background-size: cover;
+}
+
+.contact__vertegenwoordiger:before {
+  content:'';
+  float:left;
+  padding-top: 200%;
+}
+
+.contact__vertegenwoordiger:nth-child(even) {
+  background: #fff;
+  color: #000;
+  .contact__vertegenwoordiger__portrait {
+    filter: invert(1);
+  }
+}
+
+
+
 
 /*
  * styling
@@ -325,6 +442,9 @@
 
 .contact-page .logo, .contact-page .nav {
   color: #fff;
+  @media only screen and (max-width: 900px) {
+    background: rgba(0, 0, 0, 0.9);
+  }
 }
 
 .nav {
@@ -355,6 +475,12 @@
   }
 }
 
+.contact-page .nav .list .list__item__anchor {
+  &:hover {
+    border-bottom: 2px #fff solid;
+  }
+}
+
 .contact-page .nav .list .list__item__anchor.is-active {
   border-bottom: 2px #fff solid;
 }
@@ -378,6 +504,19 @@
 .studio-page .button {
   &:hover {
     color: #fff;
+  }
+  @media only screen and (max-width: 900px) {
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.contact-page .button {
+  border: 2px #fff solid;
+  &:hover {
+    background: #fff;
+    color: #000;
   }
   @media only screen and (max-width: 900px) {
     &:hover {
