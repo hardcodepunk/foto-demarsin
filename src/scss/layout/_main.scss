@@ -25,6 +25,7 @@
 
 .flex-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header {
@@ -290,6 +291,8 @@
   text-align: center;
   padding-top: 70px;
   margin-bottom: 80px;
+  white-space: nowrap;
+  line-height: 1.3em;
 }
 
 .feature {
@@ -334,7 +337,7 @@
 
 .contact__vertegenwoordiger {
   background: #000;
-  flex: 1 0 auto;
+  flex: 1;
   height: auto;
   color: #fff;
   &__portrait {

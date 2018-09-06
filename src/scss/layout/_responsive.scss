@@ -1,8 +1,31 @@
+@media only screen and (max-width: 1360px) {
+  // studio
+  .twothird-container {
+    width: 80%;
+  }
+  // contact
+  .contact__vertegenwoordiger {
+    flex-grow: 0;
+    flex-basis: 50%;
+  }
+  .contact__column {
+    flex-grow: 0;
+    flex-basis: 100%;
+  }
+  .contact {
+    padding-top: 200px;
+  }
+  .contact__address {
+    padding-left: 40px;
+    padding-top: 40px;
+    text-align: left;
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .wrapper {
     padding: 50px 5% 45px;
   }
-
   // index
   .slider__title {
     @include translateX;
@@ -19,9 +42,25 @@
     transform: rotate(0);
     margin-bottom: 0.4em;
   }
+  // studio
+  .studio__background {
+    top: 140px;
+  }
+  .studio-page__title {
+    padding-top: 100px;
+  }
+  .studio-page__sub-title {
+    padding-top: 340px;
+    white-space: normal;
+  }
+  .twothird-container {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 900px) {
+  // index
   .wrapper.header__wrapper {
     padding: 0;
   }
@@ -38,11 +77,90 @@
   .about__article__body--weighted {
     font-size: 25px;
   }
+  // studio
+  .studio-page__title {
+    font-size: 70px;
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
+  .studio-page__sub-title {
+    padding-top: 500px;
+    white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  // studio
+  .studio-page .col {
+    flex-basis: auto;
+    flex-grow: 0;
+  }
+  // contact
+  .contact__vertegenwoordiger {
+    flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  // studio
+  .studio__background {
+    top: 170px;
+  }
+  // contact
+  .contact__title {
+    font-size: 50px;
+  }
+  .contact__mail {
+    font-size: 34px;
+  }
+  .contact__address {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  // studio
+  .studio-page__title {
+    font-size: 50px;
+  }
+  .studio-page__sub-title {
+    font-size: 34px;
+  }
+  // contact
+  .contact {
+    padding-top: 140px;
+  }
 }
 
 @media only screen and (max-width: 540px) {
+  // index
   .slider__title {
     bottom: 90px;
     font-size: 1.7em;
+  }
+  // studio
+  .studio-page__title {
+    font-size: 40px;
+  }
+  .studio-page__sub-title {
+    padding-top: 500px;
+  }
+  // contact
+  .contact__title, .contact__mail, .contact__address {
+    padding-left: 0;
+  }
+  .contact__title {
+    font-size: 40px;
+  }
+  .contact__mail {
+    font-size: 27px;
+  }
+  .contact__address {
+    font-size: 20px;
+  }
+  .contact__vertegenwoordiger__info__main__subtitle {
+    font-size: 17px;
   }
 }
