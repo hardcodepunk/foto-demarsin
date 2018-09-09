@@ -70,7 +70,7 @@
   }
 }
 
-.contact-page .header .nav__toggle {
+.contact-page .header .nav__toggle, .aanbod-page .header .nav__toggle {
   .top, .middle, .bottom {
     background: #fff;
   }
@@ -190,6 +190,18 @@
   margin-bottom: 60px;
 }
 
+.presentation {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  margin: 0 0 100px;
+  overflow: hidden;
+  z-index: 3;
+  min-height: 800px;
+}
+
 /*
  * components
  */
@@ -201,6 +213,14 @@
     background: #fff;
   }
 }
+
+
+.aanbod-page .logo {
+  @media only screen and (max-width: 900px) {
+    background: #000;
+  }
+}
+
 
 .index-page .logo {
   @media only screen and (max-width: 900px) {
@@ -249,21 +269,73 @@
   margin: auto 0;
 }
 
-// studio
-.studio {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  margin: 0;
-  margin: 0 0 100px;
-  overflow: hidden;
-  z-index: 3;
-  background: #fff;
-  min-height: 800px;
+// aanbod
+.presentation.aanbod {
+  background: #000;
+  color: #fff;
+  .presentation__title {
+    color: #fff;
+  }
 }
 
-.studio__background {
+
+.gallery {
+  padding-bottom: 100px;
+}
+
+.gallery__item {
+  background: #000;
+  flex: 1;
+  height: auto;
+  color: #fff;
+  position: relative;
+}
+
+.gallery__item__img {
+  height: 100%;
+  width: 100%;
+}
+
+.gallery__item__img-1 {
+  background: url("../img/aanbod__gallery-item-1.jpg") no-repeat;
+  @include image_2x("../img/aanbod__gallery-item-1@2x.jpg", auto, 100%);
+  background-position: center;
+  background-size: contain;
+}
+
+.gallery__item__img-2 {
+  background: url("../img/aanbod__gallery-item-2.jpg") no-repeat;
+  @include image_2x("../img/aanbod__gallery-item-2@2x.jpg", auto, 100%);
+  background-position: center;
+  background-size: contain;
+}
+
+.gallery__item__img-3 {
+  background: url("../img/aanbod__gallery-item-3.jpg") no-repeat;
+  @include image_2x("../img/aanbod__gallery-item-3@2x.jpg", auto, 100%);
+  background-position: center;
+  background-size: contain;
+}
+
+.gallery__item__img-4 {
+  background: url("../img/aanbod__gallery-item-4.jpg") no-repeat;
+  @include image_2x("../img/aanbod__gallery-item-4@2x.jpg", auto, 100%);
+  background-position: center;
+  background-size: contain;
+}
+
+.gallery__item:before {
+  content:'';
+  float:left;
+  padding-top: 100%;
+}
+
+// presentation
+.presentation {
+  background: #fff;
+}
+
+.presentation__background, .presentation__background {
   position: absolute;
   top: 0;
   left: 50%;
@@ -271,21 +343,21 @@
   z-index: 1;
 }
 
-.studio__background__img {
+.presentation__background__img, .presentation__background__img {
   width: 100%;
 }
 
-.studio .wrapper {
+.presentation .wrapper {
   position: relative;
   z-index: 2;
 }
 
-.studio-page__title {
+.presentation-page__title {
   padding-top: 400px;
   font-size: 110px;
 }
 
-.studio-page__sub-title {
+.presentation-page__sub-title {
   color: $teal;
   font-size: 45px;
   text-align: center;
@@ -413,9 +485,6 @@
   }
 }
 
-
-
-
 /*
  * styling
  */
@@ -424,15 +493,19 @@
   background: $teal;
 }
 
-.studio-page, .studio-page .header {
+.presentation-page, .presentation-page .header {
   background: #fff;
+}
+
+.aanbod-page, .aanbod-page .header {
+  background: #000;
 }
 
 .contact-page .header {
   background: #000;
 }
 
-.studio-page .header, .index-page .header {
+.presentation-page .header, .index-page .header {
   @media only screen and (max-width: 900px) {
     background: none;
   }
@@ -441,6 +514,12 @@
 .logo, .nav {
   color: #000;
   font-size: 20px;
+}
+
+.aanbod-page {
+  .logo, .nav {
+    color: #fff;
+  }
 }
 
 .contact-page .logo, .contact-page .nav {
@@ -488,6 +567,16 @@
   border-bottom: 2px #fff solid;
 }
 
+.aanbod-page .nav .list .list__item__anchor {
+  &:hover {
+    border-bottom: 2px #fff solid;
+  }
+}
+
+.aanbod-page .nav .list .list__item__anchor.is-active {
+  border-bottom: 2px #fff solid;
+}
+
 .button {
   border: 2px #000 solid;
   padding: 15px;
@@ -504,7 +593,7 @@
   }
 }
 
-.studio-page .button {
+.presentation-page .button {
   &:hover {
     color: #fff;
   }
@@ -516,6 +605,19 @@
 }
 
 .contact-page .button {
+  border: 2px #fff solid;
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+  @media only screen and (max-width: 900px) {
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.aanbod-page .button {
   border: 2px #fff solid;
   &:hover {
     background: #fff;

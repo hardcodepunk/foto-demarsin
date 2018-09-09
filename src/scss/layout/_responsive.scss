@@ -1,10 +1,15 @@
 @media only screen and (max-width: 1360px) {
-  // studio
+  .aanbod-page .presentation, .presentation-page .row:last-child > .col:last-child {
+    margin-bottom: 0;
+  }
   .twothird-container {
     width: 80%;
   }
+  .gallery__item {
+    padding: 5% 0;
+  }
   // contact
-  .contact__vertegenwoordiger {
+  .contact__vertegenwoordiger, .gallery__item {
     flex-grow: 0;
     flex-basis: 50%;
   }
@@ -42,16 +47,22 @@
     transform: rotate(0);
     margin-bottom: 0.4em;
   }
-  // studio
-  .studio__background {
+  // presentation
+  .studio__presentation__background {
     top: 140px;
   }
-  .studio-page__title {
+  .presentation-page__title {
     padding-top: 100px;
   }
-  .studio-page__sub-title {
+  .aanbod-page .presentation-page__title {
+    padding-top: 430px;
+  }
+  .presentation-page__sub-title {
     padding-top: 340px;
     white-space: normal;
+  }
+  .aanbod-page .presentation-page__sub-title {
+    padding-top: 40px;
   }
   .twothird-container {
     float: none;
@@ -77,25 +88,39 @@
   .about__article__body--weighted {
     font-size: 25px;
   }
-  // studio
-  .studio-page__title {
+  // presentation
+  .presentation-page__title {
     font-size: 70px;
     text-align: center;
     br {
       display: none;
     }
   }
-  .studio-page__sub-title {
+  .aanbod-page .presentation-page__sub-title {
+    font-size: 30px;
+  }
+  .aanbod-page .presentation-page__title {
+    text-align: left;
+  }
+  .presentation-page__sub-title {
     padding-top: 500px;
     white-space: normal;
   }
 }
 
 @media only screen and (max-width: 740px) {
-  // studio
-  .studio-page .col {
+  .row > .col:not(:last-child) {
+    margin-right: 0;
+  }
+  // presentation
+  .presentation-page .col {
     flex-basis: auto;
     flex-grow: 0;
+  }
+  .aanbod-page .presentation-page__sub-title {
+    font-size: 30px;
+    padding-top: 4px;
+    margin-bottom: 70px;
   }
   // contact
   .contact__vertegenwoordiger {
@@ -104,8 +129,11 @@
 }
 
 @media only screen and (max-width: 650px) {
-  // studio
-  .studio__background {
+  .gallery__item {
+    flex-grow: 0;
+    flex-basis: 100%;
+  }
+  .studio__presentation__background {
     top: 170px;
   }
   // contact
@@ -121,12 +149,18 @@
 }
 
 @media only screen and (max-width: 590px) {
-  // studio
-  .studio-page__title {
+  .aanbod-page .presentation-page__title {
+    padding-top: 400px;
+    text-align: right;
+  }
+  .presentation-page__title {
     font-size: 50px;
   }
-  .studio-page__sub-title {
+  .presentation-page__sub-title {
     font-size: 34px;
+  }
+  .aanbod-page .presentation-page__sub-title {
+    font-size: 21px;
   }
   // contact
   .contact {
@@ -135,16 +169,14 @@
 }
 
 @media only screen and (max-width: 540px) {
-  // index
   .slider__title {
     bottom: 90px;
     font-size: 1.7em;
   }
-  // studio
-  .studio-page__title {
-    font-size: 40px;
+  .presentation-page__title {
+    font-size: 37px;
   }
-  .studio-page__sub-title {
+  .presentation-page__sub-title {
     padding-top: 500px;
   }
   // contact
