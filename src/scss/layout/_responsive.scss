@@ -1,5 +1,5 @@
 @media only screen and (max-width: 1360px) {
-  .aanbod-page .presentation, .presentation-page .row:last-child > .col:last-child {
+  .linkit-page .presentation, .presentation-page .row:last-child > .col:last-child {
     margin-bottom: 0;
   }
   .twothird-container {
@@ -54,14 +54,14 @@
   .presentation-page__title {
     padding-top: 100px;
   }
-  .aanbod-page .presentation-page__title {
+  .linkit-page .presentation-page__title {
     padding-top: 430px;
   }
   .presentation-page__sub-title {
     padding-top: 340px;
     white-space: normal;
   }
-  .aanbod-page .presentation-page__sub-title {
+  .linkit-page .presentation-page__sub-title {
     padding-top: 40px;
   }
   .twothird-container {
@@ -96,10 +96,10 @@
       display: none;
     }
   }
-  .aanbod-page .presentation-page__sub-title {
+  .linkit-page .presentation-page__sub-title {
     font-size: 30px;
   }
-  .aanbod-page .presentation-page__title {
+  .linkit-page .presentation-page__title {
     text-align: left;
   }
   .presentation-page__sub-title {
@@ -117,7 +117,7 @@
     flex-basis: auto;
     flex-grow: 0;
   }
-  .aanbod-page .presentation-page__sub-title {
+  .linkit-page .presentation-page__sub-title {
     font-size: 30px;
     padding-top: 4px;
     margin-bottom: 70px;
@@ -149,7 +149,7 @@
 }
 
 @media only screen and (max-width: 590px) {
-  .aanbod-page .presentation-page__title {
+  .linkit-page .presentation-page__title {
     padding-top: 400px;
     text-align: right;
   }
@@ -159,7 +159,7 @@
   .presentation-page__sub-title {
     font-size: 34px;
   }
-  .aanbod-page .presentation-page__sub-title {
+  .linkit-page .presentation-page__sub-title {
     font-size: 21px;
   }
   // contact

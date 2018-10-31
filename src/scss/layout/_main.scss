@@ -70,7 +70,7 @@
   }
 }
 
-.contact-page .header .nav__toggle, .aanbod-page .header .nav__toggle {
+.contact-page .header .nav__toggle, .linkit-page .header .nav__toggle {
   .top, .middle, .bottom {
     background: #fff;
   }
@@ -215,7 +215,7 @@
 }
 
 
-.aanbod-page .logo {
+.linkit-page .logo {
   @media only screen and (max-width: 900px) {
     background: #000;
   }
@@ -229,6 +229,302 @@
 }
 
 // homepage
+
+$background2: #fff;
+
+%circle {
+  border-radius: 100%;
+}
+
+%centering {
+  position: absolute;
+  top: 50%; left: 50%;
+}
+
+$diameter: 14em;
+
+.icon__experience {
+  @include translateXY();
+  top: 40%;
+  $logo-diameter: $diameter+1em;
+  $rounded-corners: 1.5em;
+  background: #000;
+  border-radius: $rounded-corners;
+  color: #fff;
+  margin: 2em auto;
+  width: $logo-diameter; height: $logo-diameter;
+  z-index: -2;
+  &:before {
+    background: #000;
+    border-radius: $rounded-corners;
+    content:"";
+    position: absolute;
+    top: 0; left: 0;
+    transform: rotate(30deg);
+    width: $logo-diameter; height: $logo-diameter;
+    z-index: -2;
+  }
+  &:after {
+    background: #000;
+    border-radius: $rounded-corners;
+    content:"";
+    position: absolute;
+    top: 0; left: 0;
+    transform: rotate(-30deg);
+    width: $logo-diameter; height: $logo-diameter;
+    z-index: -2;
+  }
+}
+
+.rivets {
+  $rivets-diameter: $diameter+1em;
+  width: $rivets-diameter; height: $rivets-diameter;
+  &:before, &:after {
+    content: " ";
+    background: #000;
+    @extend %circle;
+    position: absolute;
+    top: 50%;
+    margin-top: -.25em;
+    width: .5em; height: .5em;
+  }
+  &:before {
+    left: -.75em;
+  }
+  &:after {
+    right: -.75em;
+  }
+}
+
+.seal {
+  $seal-diameter: $diameter + 1em;
+  @extend %circle;
+  @extend %centering;
+  background: #000;
+  margin-top: -($seal-diameter/2); margin-left: -($seal-diameter/2);
+  width: $seal-diameter; height: $seal-diameter;
+  &:before {
+    @extend %centering;
+    $width: $diameter * 1.75;
+    $height: 2.4em;
+    background: $background2;
+    content: '';
+    margin-top: -($height);
+    margin-left: -($width/2);
+    z-index: -1;
+    width: $width; height: 0;
+    border: $height solid rgba(0, 0, 0, 0);
+    border-left: $height/2 solid #fff;
+    border-right: $height/2 solid #fff;
+    box-sizing: border-box;
+    /*Fix to make the borders appear on the ribbon ends also*/
+    background-origin: border-box;
+  }
+  $cutout-corner-orientation: 100px;
+  &__cutout-corner {
+    @include translateY();
+    width: 0;
+    height: 0;
+  }
+  &__cutout-corner--left {
+    left: - $cutout-corner-orientation;
+    border-top: 70px solid transparent;
+    border-left: 60px solid $teal;
+    border-bottom: 70px solid transparent;
+  }
+  &__cutout-corner--right {
+    right: - $cutout-corner-orientation;
+    border-top: 70px solid transparent;
+    border-right: 60px solid $teal;
+    border-bottom: 70px solid transparent;
+  }
+}
+
+.type {
+  @extend %circle;
+  position: relative;
+  box-sizing: border-box;
+  background: $background2;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1em;
+  @extend %centering;
+  margin-top: -($diameter/2); margin-left: -($diameter/2);
+  width: $diameter; height: $diameter;
+  span {
+    font-size: 8em;
+    color: #000;
+    font-weight: bold;
+    @include translateXY();
+  }
+}
+
+.icon__online {
+  @include translateXY();
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  &:before {
+    content: '';
+    @include translateX();
+    top: -90px;
+    width: 300px;
+    height: 200px;
+    border: solid 50px #000;
+    border-color:#000 transparent transparent transparent;
+    border-radius: 50%/150px 150px 0 0;
+  }
+  &:after {
+    content: '';
+    @include translateX();
+    top: -180px;
+    width: 479px;
+    height: 279px;
+    border: solid 50px #000;
+    border-color:#000 transparent transparent transparent;
+    border-radius: 50%/255px 255px 0 0;
+  }
+}
+
+.icon__shipping {
+  @include translateXY();
+  top: 40%;
+  left: 54%;
+  height: 200px;
+  width: 300px;
+  border: 50px solid #000;
+  &:before, &:after {
+    content: '';
+    display: inline-block;
+    top: 5px;
+    height: 50px;
+    width: 161px;
+    background: #000;
+    position: absolute;
+  }
+  &:before {
+    left: -40px;
+    transform: rotate(28deg);
+  }
+  &:after {
+    right: -40px;
+    transform: rotate(-28deg);
+  }
+  &__speed-lines {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: -200px;
+      height: 175px;
+      width: 100px;
+      border-bottom: 50px solid #fff;
+      border-top: 50px solid #fff;
+    }
+    &:before {
+      left: -250px;
+      top: -67px;
+    }
+    &:after {
+      bottom: -70px;
+    }
+  }
+}
+
+.icon__professional {
+  @include translateXY();
+  top: 24%;
+  &__medium, &__large {
+    @include translateX();
+      &__top {
+      height: 50px;
+      width: 50px;
+      background: #000;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+      }
+      &:before {
+        left: -50px;
+        border-top: 50px solid #000;
+        border-left: 50px solid transparent;
+      }
+      &:after {
+        right: -50px;
+        border-top: 50px solid #000;
+        border-right: 50px solid transparent;
+      }
+    }
+    &__mid {
+      height: 200px;
+      width: 50px;
+      margin-top: 10px;
+      background: #000;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+      }
+      &:before {
+        left: -30px;
+        border-bottom: 200px solid #000;
+        border-left: 30px solid transparent;
+      }
+      &:after {
+        right: -30px;
+        border-bottom: 200px solid #000;
+        border-right: 30px solid transparent;
+      }
+    }
+    &__bot {
+      @include translateX();
+      height: 0;
+      border-style: solid;
+      border-color: #000 transparent transparent transparent;
+      border-width: 50px 55px 0 55px;
+    }
+  }
+  &__medium {
+    left: -160px;
+    &__top {
+      height: 40px;
+      width: 40px;
+      &:before {
+        left: -40px;
+        border-top: 40px solid #000;
+        border-left: 40px solid transparent;
+      }
+      &:after {
+        right: -40px;
+        border-top: 40px solid #000;
+        border-right: 40px solid transparent;
+      }
+    }
+    &__mid {
+      height: 160px;
+      width: 40px;
+      margin-top: 8px;
+      &:before {
+        left: -24px;
+        border-bottom: 160px solid #000;
+        border-left: 24px solid transparent;
+      }
+      &:after {
+        right: -24px;
+        border-bottom: 160px solid #000;
+        border-right: 24px solid transparent;
+      }
+    }
+    &__bot {
+      border-width: 40px 44px 0 44px;
+    }
+  }
+  &__medium--right {
+    left: 160px;
+  }
+}
 
 .about {
   background: #000;
@@ -269,15 +565,14 @@
   margin: auto 0;
 }
 
-// aanbod
-.presentation.aanbod {
+// linkit
+.presentation.linkit {
   background: #000;
   color: #fff;
   .presentation__title {
     color: #fff;
   }
 }
-
 
 .gallery {
   padding-bottom: 100px;
@@ -297,29 +592,29 @@
 }
 
 .gallery__item__img-1 {
-  background: url("../img/aanbod__gallery-item-1.jpg") no-repeat;
-  @include image_2x("../img/aanbod__gallery-item-1@2x.jpg", auto, 100%);
+  background: url("../img/linkit__gallery-item-1.jpg") no-repeat;
+  @include image_2x("../img/linkit__gallery-item-1@2x.jpg", auto, 100%);
   background-position: center;
   background-size: contain;
 }
 
 .gallery__item__img-2 {
-  background: url("../img/aanbod__gallery-item-2.jpg") no-repeat;
-  @include image_2x("../img/aanbod__gallery-item-2@2x.jpg", auto, 100%);
+  background: url("../img/linkit__gallery-item-2.jpg") no-repeat;
+  @include image_2x("../img/linkit__gallery-item-2@2x.jpg", auto, 100%);
   background-position: center;
   background-size: contain;
 }
 
 .gallery__item__img-3 {
-  background: url("../img/aanbod__gallery-item-3.jpg") no-repeat;
-  @include image_2x("../img/aanbod__gallery-item-3@2x.jpg", auto, 100%);
+  background: url("../img/linkit__gallery-item-3.jpg") no-repeat;
+  @include image_2x("../img/linkit__gallery-item-3@2x.jpg", auto, 100%);
   background-position: center;
   background-size: contain;
 }
 
 .gallery__item__img-4 {
-  background: url("../img/aanbod__gallery-item-4.jpg") no-repeat;
-  @include image_2x("../img/aanbod__gallery-item-4@2x.jpg", auto, 100%);
+  background: url("../img/linkit__gallery-item-4.jpg") no-repeat;
+  @include image_2x("../img/linkit__gallery-item-4@2x.jpg", auto, 100%);
   background-position: center;
   background-size: contain;
 }
@@ -497,7 +792,7 @@
   background: #fff;
 }
 
-.aanbod-page, .aanbod-page .header {
+.linkit-page, .linkit-page .header {
   background: #000;
 }
 
@@ -516,7 +811,7 @@
   font-size: 20px;
 }
 
-.aanbod-page {
+.linkit-page {
   .logo, .nav {
     color: #fff;
   }
@@ -567,13 +862,13 @@
   border-bottom: 2px #fff solid;
 }
 
-.aanbod-page .nav .list .list__item__anchor {
+.linkit-page .nav .list .list__item__anchor {
   &:hover {
     border-bottom: 2px #fff solid;
   }
 }
 
-.aanbod-page .nav .list .list__item__anchor.is-active {
+.linkit-page .nav .list .list__item__anchor.is-active {
   border-bottom: 2px #fff solid;
 }
 
@@ -617,7 +912,7 @@
   }
 }
 
-.aanbod-page .button {
+.linkit-page .button {
   border: 2px #fff solid;
   &:hover {
     background: #fff;
@@ -636,7 +931,7 @@
 
  .slider__title {
    position: absolute;
-   bottom: 140px;
+   bottom: 100px;
    padding-left: 40px;
  }
 
