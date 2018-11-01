@@ -394,6 +394,7 @@ $diameter: 14em;
   height: 200px;
   width: 300px;
   border: 50px solid #000;
+  background: #fff;
   &:before, &:after {
     content: '';
     display: inline-block;
@@ -419,8 +420,8 @@ $diameter: 14em;
       left: -200px;
       height: 175px;
       width: 100px;
-      border-bottom: 50px solid #fff;
-      border-top: 50px solid #fff;
+      border-bottom: 50px solid #000;
+      border-top: 50px solid #000;
     }
     &:before {
       left: -250px;
@@ -737,9 +738,9 @@ $diameter: 14em;
       flex: 1;
     }
   }
-  &:hover {
+  /*&:hover {
     filter: invert(1);
-  }
+  }*/
 }
 
 .contact__vertegenwoordiger__portrait--hans {
@@ -775,9 +776,9 @@ $diameter: 14em;
 .contact__vertegenwoordiger:nth-child(even) {
   background: #fff;
   color: #000;
-  .contact__vertegenwoordiger__portrait {
+  /*.contact__vertegenwoordiger__portrait {
     filter: invert(1);
-  }
+  }*/
 }
 
 /*
