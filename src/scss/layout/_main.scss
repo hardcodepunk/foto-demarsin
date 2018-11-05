@@ -372,8 +372,10 @@ $diameter: 14em;
     width: 300px;
     height: 200px;
     border: solid 50px #000;
-    border-color:#000 transparent transparent transparent;
+    border-color: #000 transparent transparent transparent;
     border-radius: 50%/150px 150px 0 0;
+    animation: flicker-small-ray 2s steps(2, end) infinite;
+    visibility: hidden;
   }
   &:after {
     content: '';
@@ -382,8 +384,10 @@ $diameter: 14em;
     width: 479px;
     height: 279px;
     border: solid 50px #000;
-    border-color:#000 transparent transparent transparent;
+    border-color: #000 transparent transparent transparent;
     border-radius: 50%/255px 255px 0 0;
+    animation: flicker-big-ray 2s steps(2, end) infinite;
+    visibility: hidden;
   }
 }
 

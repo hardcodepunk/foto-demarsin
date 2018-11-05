@@ -1,0 +1,14 @@
+@keyframes flicker-small-ray {
+  50% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes flicker-big-ray {
+  to {
+    visibility: visible;
+  }
+}
