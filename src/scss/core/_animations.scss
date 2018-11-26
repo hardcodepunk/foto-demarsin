@@ -1,4 +1,4 @@
-@keyframes flicker-small-ray {
+@keyframes appear {
   50% {
     visibility: visible;
   }
@@ -7,8 +7,26 @@
   }
 }
 
-@keyframes flicker-big-ray {
+@keyframes appear-later {
   to {
     visibility: visible;
+  }
+}
+
+@keyframes speed-lines-1 {
+  to {
+    left: -300px;
+  }
+}
+
+@keyframes speed-lines-2 {
+  to {
+    left: -250px;
+  }
+}
+
+@keyframes up-down-icon-shipping {
+  to {
+    top: 42%;
   }
 }

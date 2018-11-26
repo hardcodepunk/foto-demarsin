@@ -246,116 +246,10 @@ $diameter: 14em;
 .icon__experience {
   @include translateXY();
   top: 40%;
-  $logo-diameter: $diameter+1em;
-  $rounded-corners: 1.5em;
-  background: #000;
-  border-radius: $rounded-corners;
-  color: #fff;
-  margin: 2em auto;
-  width: $logo-diameter; height: $logo-diameter;
-  z-index: -2;
-  &:before {
+  &__body {
     background: #000;
-    border-radius: $rounded-corners;
-    content:"";
-    position: absolute;
-    top: 0; left: 0;
-    transform: rotate(30deg);
-    width: $logo-diameter; height: $logo-diameter;
-    z-index: -2;
-  }
-  &:after {
-    background: #000;
-    border-radius: $rounded-corners;
-    content:"";
-    position: absolute;
-    top: 0; left: 0;
-    transform: rotate(-30deg);
-    width: $logo-diameter; height: $logo-diameter;
-    z-index: -2;
-  }
-}
-
-.rivets {
-  $rivets-diameter: $diameter+1em;
-  width: $rivets-diameter; height: $rivets-diameter;
-  &:before, &:after {
-    content: " ";
-    background: #000;
-    @extend %circle;
-    position: absolute;
-    top: 50%;
-    margin-top: -.25em;
-    width: .5em; height: .5em;
-  }
-  &:before {
-    left: -.75em;
-  }
-  &:after {
-    right: -.75em;
-  }
-}
-
-.seal {
-  $seal-diameter: $diameter + 1em;
-  @extend %circle;
-  @extend %centering;
-  background: #000;
-  margin-top: -($seal-diameter/2); margin-left: -($seal-diameter/2);
-  width: $seal-diameter; height: $seal-diameter;
-  &:before {
-    @extend %centering;
-    $width: $diameter * 1.75;
-    $height: 2.4em;
-    background: $background2;
-    content: '';
-    margin-top: -($height);
-    margin-left: -($width/2);
-    z-index: -1;
-    width: $width; height: 0;
-    border: $height solid rgba(0, 0, 0, 0);
-    border-left: $height/2 solid #fff;
-    border-right: $height/2 solid #fff;
-    box-sizing: border-box;
-    /*Fix to make the borders appear on the ribbon ends also*/
-    background-origin: border-box;
-  }
-  $cutout-corner-orientation: 100px;
-  &__cutout-corner {
-    @include translateY();
-    width: 0;
-    height: 0;
-  }
-  &__cutout-corner--left {
-    left: - $cutout-corner-orientation;
-    border-top: 70px solid transparent;
-    border-left: 60px solid $teal;
-    border-bottom: 70px solid transparent;
-  }
-  &__cutout-corner--right {
-    right: - $cutout-corner-orientation;
-    border-top: 70px solid transparent;
-    border-right: 60px solid $teal;
-    border-bottom: 70px solid transparent;
-  }
-}
-
-.type {
-  @extend %circle;
-  position: relative;
-  box-sizing: border-box;
-  background: $background2;
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 1em;
-  @extend %centering;
-  margin-top: -($diameter/2); margin-left: -($diameter/2);
-  width: $diameter; height: $diameter;
-  span {
-    font-size: 8em;
-    color: #000;
-    font-weight: bold;
-    @include translateXY();
+    height: 400px;
+    width: 80px;
   }
 }
 
@@ -374,7 +268,7 @@ $diameter: 14em;
     border: solid 50px #000;
     border-color: #000 transparent transparent transparent;
     border-radius: 50%/150px 150px 0 0;
-    animation: flicker-small-ray 2s steps(2, end) infinite;
+    animation: appear 2s steps(2, end) infinite;
     visibility: hidden;
   }
   &:after {
@@ -386,7 +280,7 @@ $diameter: 14em;
     border: solid 50px #000;
     border-color: #000 transparent transparent transparent;
     border-radius: 50%/255px 255px 0 0;
-    animation: flicker-big-ray 2s steps(2, end) infinite;
+    animation: appear-later 2s steps(2, end) infinite;
     visibility: hidden;
   }
 }
@@ -397,24 +291,24 @@ $diameter: 14em;
   left: 54%;
   height: 200px;
   width: 300px;
-  border: 50px solid #000;
+  border: 30px solid #000;
   background: #fff;
   &:before, &:after {
     content: '';
     display: inline-block;
-    top: 5px;
-    height: 50px;
-    width: 161px;
+    top: 30px;
+    height: 30px;
+    width: 168px;
     background: #000;
     position: absolute;
   }
   &:before {
-    left: -40px;
-    transform: rotate(28deg);
+    left: -24px;
+    transform: rotate(35deg);
   }
   &:after {
-    right: -40px;
-    transform: rotate(-28deg);
+    right: -24px;
+    transform: rotate(-35deg);
   }
   &__speed-lines {
     &:before, &:after {
@@ -424,15 +318,18 @@ $diameter: 14em;
       left: -200px;
       height: 175px;
       width: 100px;
-      border-bottom: 50px solid #000;
-      border-top: 50px solid #000;
+      border-bottom: 30px solid #000;
+      border-top: 30px solid #000;
     }
     &:before {
       left: -250px;
       top: -67px;
+      animation: speed-lines-1 2s steps(2, end) infinite;;
     }
     &:after {
       bottom: -70px;
+      animation: speed-lines-2 2s steps(2, end) infinite;;
+      animation-delay: 0.5s;
     }
   }
 }
@@ -493,6 +390,8 @@ $diameter: 14em;
   }
   &__medium {
     left: -160px;
+    animation: appear 4s steps(2, end) infinite;
+    visibility: hidden;
     &__top {
       height: 40px;
       width: 40px;
@@ -528,6 +427,8 @@ $diameter: 14em;
   }
   &__medium--right {
     left: 160px;
+    animation: appear-later 4s steps(2, end) infinite;
+    visibility: hidden;
   }
 }
 
@@ -658,7 +559,7 @@ $diameter: 14em;
 }
 
 .presentation-page__sub-title {
-  color: $teal;
+  color: darken($teal, 10%);
   font-size: 45px;
   text-align: center;
   padding-top: 70px;
