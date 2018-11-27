@@ -249,7 +249,88 @@ $diameter: 14em;
   &__body {
     background: #000;
     height: 400px;
-    width: 80px;
+    width: 90px;
+    position: relative;
+    &__button {
+      @include translateX();
+      border-radius: 50%;
+      background: #fff;
+      &:not(:last-child):after {
+        content: '';
+        @include translateXY();
+        border-radius: 50%;
+        background: #000;
+        height: 20px;
+        width: 20px;
+      }
+    }
+    &__button--big {
+      top: 4%;
+      height: 70px;
+      width: 70px;
+    }
+    &__button--medium {
+      top: 35%;
+      height: 60px;
+      width: 60px;
+    }
+    &__button--small {
+      bottom: 5%;
+      left: 40%;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__lens {
+    height: 400px;
+    width: 300px;
+    position: relative;
+    align-items: center;
+    &__part {
+      background: #000;
+      height: 250px;
+      width: 60px;
+      animation: zoom 4s infinite ease-in-out;
+      animation-delay: 1s;
+      &__front, &__cap {
+        animation: none;
+      }
+      &__front {
+        height: 250px;
+        width: 40px;
+      }
+      &__cap {
+        height: 100px;
+        width: 20px;
+      }
+    }
+    &__part--2 {
+      height: 220px;
+    }
+    &__part--3 {
+      height: 190px;
+    }
+    &__part--4 {
+      height: 160px;
+    }
+    &:before {
+      content: '';
+      @include translateY();
+      margin-top: 145px;
+      background: #000;
+      height: 40px;
+      width: 300px;
+      left: 0;
+    }
+    &:after {
+      content: '';
+      @include translateXY();
+      margin-top: 125px;
+      border-radius: 50%;
+      background: #fff;
+      height: 30px;
+      width: 30px;
+    }
   }
 }
 

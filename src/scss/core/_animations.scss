@@ -30,3 +30,18 @@
     top: 42%;
   }
 }
+
+@keyframes zoom {
+  0% {
+    width: 60px;
+  }
+  25% {
+    width: 40px;
+  }
+  50% {
+    width: 40px;
+  }
+  75% {
+    width: 60px;
+  }
+}
