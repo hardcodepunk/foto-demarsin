@@ -106,6 +106,12 @@
     padding-top: 500px;
     white-space: normal;
   }
+  .icon__shipping {
+    left: 50%;
+    &__speed-lines {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (max-width: 740px) {
@@ -194,5 +200,205 @@
   }
   .contact__vertegenwoordiger__info__main__subtitle {
     font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .slider__title {
+    bottom: 70px;
+    font-size: 1.4em;
+  }
+  .icon__experience {
+    top: 50%;
+    &__body {
+      height: 200px;
+      width: 45px;
+      &__button {
+        &:not(:last-child):after {
+          height: 10px;
+          width: 10px;
+        }
+      }
+      &__button--big {
+        height: 35px;
+        width: 35px;
+      }
+      &__button--medium {
+        height: 30px;
+        width: 30px;
+      }
+      &__button--small {
+        height: 20px;
+        width: 20px;
+      }
+    }
+    &__lens {
+      height: 200px;
+      width: 150px;
+      &__part {
+        height: 125px;
+        width: 30px;
+        animation: none;
+        &__front {
+          height: 125px;
+          width: 20px;
+        }
+        &__cap {
+          height: 50px;
+          width: 10px;
+        }
+      }
+      &__part--2 {
+        height: 110px;
+      }
+      &__part--3 {
+        height: 95px;
+      }
+      &__part--4 {
+        height: 80px;
+      }
+      &:before {
+        margin-top: 73px;
+        height: 20px;
+        width: 150px;
+      }
+      &:after {
+        margin-top: 62px;
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
+  .icon__professional {
+    top: 30%;
+    &__medium, &__large {
+        &__top {
+        height: 25px;
+        width: 25px;
+        &:before {
+          left: -25px;
+          border-top: 25px solid #000;
+          border-left: 25px solid transparent;
+        }
+        &:after {
+          right: -25px;
+          border-top: 25px solid #000;
+          border-right: 25px solid transparent;
+        }
+      }
+      &__mid {
+        height: 100px;
+        width: 25px;
+        margin-top: 5px;
+        &:before {
+          left: -15px;
+          border-bottom: 100px solid #000;
+          border-left: 15px solid transparent;
+        }
+        &:after {
+          right: -15px;
+          border-bottom: 100px solid #000;
+          border-right: 15px solid transparent;
+        }
+      }
+      &__bot {
+        border-width: 30px 27px 0 27px;
+      }
+    }
+    &__medium {
+      left: -80px;
+      animation: none;
+      visibility: visible;
+      &__top {
+        height: 20px;
+        width: 20px;
+        &:before {
+          left: -20px;
+          border-top: 20px solid #000;
+          border-left: 20px solid transparent;
+        }
+        &:after {
+          right: -20px;
+          border-top: 20px solid #000;
+          border-right: 20px solid transparent;
+        }
+      }
+      &__mid {
+        height: 80px;
+        width: 20px;
+        margin-top: 4px;
+        &:before {
+          left: -12px;
+          border-bottom: 80px solid #000;
+          border-left: 12px solid transparent;
+        }
+        &:after {
+          right: -12px;
+          border-bottom: 80px solid #000;
+          border-right: 12px solid transparent;
+        }
+      }
+      &__bot {
+        border-width: 25px 22px 0 22px;
+      }
+    }
+    &__medium--right {
+      left: 80px;
+      animation: none;
+      visibility: visible;
+    }
+  }
+  .icon__online {
+    width: 25px;
+    height: 25px;
+    &:before {
+      top: -45px;
+      width: 155px;
+      height: 100px;
+      border: solid 25px #000;
+      border-color: #000 transparent transparent transparent;
+      border-radius: 50%/75px 75px 0 0;
+      animation: none;
+      visibility: visible;
+    }
+    &:after {
+      top: -90px;
+      width: 245px;
+      height: 179px;
+      border: solid 25px #000;
+      border-color: #000 transparent transparent transparent;
+      border-radius: 50%/120px 120px 0 0;
+      animation: none;
+      visibility: visible;
+    }
+  }
+  .icon__shipping {
+    @include translateXY();
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 150px;
+    border: 15px solid #000;
+    background: #fff;
+    &:before, &:after {
+      content: '';
+      display: inline-block;
+      top: 15px;
+      height: 15px;
+      width: 84px;
+      background: #000;
+      position: absolute;
+    }
+    &:before {
+      left: -8px;
+      transform: rotate(35deg);
+    }
+    &:after {
+      right: -16px;
+      transform: rotate(-35deg);
+    }
+    &__speed-lines {
+      display: none;
+    }
   }
 }
