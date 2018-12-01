@@ -245,7 +245,7 @@ $diameter: 14em;
 
 .icon__experience {
   @include translateXY();
-  top: 40%;
+  top: 45%;
   flex-wrap: nowrap;
   &__body {
     background: #000;
@@ -921,7 +921,7 @@ $diameter: 14em;
 
  .slider__title {
    position: absolute;
-   bottom: 100px;
+   bottom: 55px;
    padding-left: 40px;
  }
 
@@ -949,12 +949,11 @@ $diameter: 14em;
  .flexslider {
    margin: 0;
    padding: 0;
-   min-height: 470px;
+   min-height: 700px;
  }
  .flexslider .slides {
     zoom: 1;
     height: 100%
-
 }
  .flexslider .slides > li {
    display: none;

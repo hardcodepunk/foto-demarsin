@@ -68,6 +68,10 @@
     float: none;
     margin: 0 auto;
   }
+  // online
+  .online__presentation__background {
+    top: 140px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -131,6 +135,10 @@
   // contact
   .contact__vertegenwoordiger {
     flex-basis: 100%;
+  }
+  // online
+  .online__presentation__background {
+    top: 180px;
   }
 }
 
@@ -204,6 +212,9 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .flexslider {
+    min-height: 470px;
+  }
   .slider__title {
     bottom: 70px;
     font-size: 1.4em;
