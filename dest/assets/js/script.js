@@ -1,1 +1,22 @@
-!function e(n,r,o){function t(u,c){if(!r[u]){if(!n[u]){var f="function"==typeof require&&require;if(!c&&f)return f(u,!0);if(i)return i(u,!0);var l=new Error("Cannot find module '"+u+"'");throw l.code="MODULE_NOT_FOUND",l}var d=r[u]={exports:{}};n[u][0].call(d.exports,function(e){var r=n[u][1][e];return t(r||e)},d,d.exports,e,n,r,o)}return r[u].exports}for(var i="function"==typeof require&&require,u=0;u<o.length;u++)t(o[u]);return t}({1:[function(e,n,r){var o=window.pageYOffset;window.onscroll=function(){var e=window.pageYOffset;o>e||(document.getElementById("index-page__scroll-instruction").style.display="none"),o=e};document.querySelector(".js-menu-toggle").onclick=function(){document.querySelector(".body").classList.toggle("open-menu")},window.onload=function(){$(".flexslider").flexslider({directionNav:!1})}},{}]},{},[1]);
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    //document.getElementById("site-nav").style.transform = "translate(0,0)"
+  } else {
+    //document.getElementById("site-nav").style.transform = "translate(0,-115px)"
+    document.getElementById("index-page__scroll-instruction").style.display = "none";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var toggleNav = document.querySelector('.js-menu-toggle');
+toggleNav.onclick = function() {
+  document.querySelector('.body').classList.toggle('open-menu');
+}
+
+window.onload = function() {
+  $(".flexslider").flexslider({
+    directionNav: !1
+  })
+}
