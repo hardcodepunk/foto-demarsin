@@ -690,11 +690,11 @@ $diameter: 14em;
   background-size: cover;
 }
 
-.contact__vertegenwoordiger__portrait--matthias {
-  background: url("../img/portrait__matthias-claes.jpg") no-repeat;
-  @include image_2x("../img/portrait__matthias-claes@2x.jpg", 100%, 100%);
+.contact__vertegenwoordiger__portrait--sien {
+  background: url("../img/portrait__sien-daeleman.jpg") no-repeat;
+  @include image_2x("../img/portrait__sien-daeleman@2x.jpg", 100%, 100%);
   background-size: cover;
-}
+} 
 
 .contact__vertegenwoordiger:before {
   content:'';
